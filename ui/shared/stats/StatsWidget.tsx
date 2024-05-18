@@ -34,7 +34,7 @@ const Container = ({ href, children }: { href?: Route; children: JSX.Element }) 
 };
 
 const StatsWidget = ({ label, value, valuePrefix, valuePostfix, isLoading, hint, diff, diffPeriod = '24h', diffFormatted, period, href }: Props) => {
-  const bgColor = useColorModeValue('blue.50', 'whiteAlpha.100');
+  const bgColor = useColorModeValue('black', 'black');
   const skeletonBgColor = useColorModeValue('blackAlpha.50', 'whiteAlpha.50');
   const hintColor = useColorModeValue('gray.600', 'gray.400');
 
@@ -43,6 +43,7 @@ const StatsWidget = ({ label, value, valuePrefix, valuePostfix, isLoading, hint,
       <Flex
         alignItems="flex-start"
         bgColor={ isLoading ? skeletonBgColor : bgColor }
+        border="1px solid #8c8d8f"
         px={ 3 }
         py={{ base: 2, lg: 3 }}
         borderRadius="md"
