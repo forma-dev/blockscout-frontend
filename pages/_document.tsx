@@ -42,6 +42,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
             rel="stylesheet"
           />
+          <link href="https://fonts.cdnfonts.com/css/ibm-plex-mono-3" rel="stylesheet"></link>
 
           { /* eslint-disable-next-line @next/next/no-sync-scripts */ }
           <script src="/envs.js"/>

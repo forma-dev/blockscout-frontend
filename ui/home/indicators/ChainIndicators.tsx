@@ -38,7 +38,7 @@ const ChainIndicators = () => {
     },
   });
 
-  const bgColorDesktop = useColorModeValue('white', 'gray.900');
+  const bgColorDesktop = useColorModeValue('white', 'black');
   const bgColorMobile = useColorModeValue('white', 'black');
   const listBgColorDesktop = useColorModeValue('gray.50', 'black');
   const listBgColorMobile = useColorModeValue('gray.50', 'gray.900');
@@ -89,6 +89,7 @@ const ChainIndicators = () => {
       borderRadius={{ base: 'none', lg: 'lg' }}
       boxShadow={{ base: 'none', lg: 'xl' }}
       bgColor={{ base: bgColorMobile, lg: bgColorDesktop }}
+      border="1px solid #8c8d8f"
       columnGap={ 6 }
       rowGap={ 0 }
       flexDir={{ base: 'column', lg: 'row' }}
