@@ -9,10 +9,12 @@ export function googleFonts(): CspDev.DirectiveDescriptor {
     ],
     'style-src': [
       'fonts.googleapis.com',
+      'fonts.cdnfonts.com',
     ],
     'font-src': [
       'fonts.gstatic.com',
       'fonts.googleapis.com',
+      'fonts.cdnfonts.com',
     ],
   };
 }
