@@ -39,7 +39,7 @@ const ChainIndicators = () => {
     },
   });
 
-  const bgColor = useColorModeValue('gray.50', 'whiteAlpha.100');
+  const bgColor = useColorModeValue('white', 'black');
 
   if (indicators.length === 0) {
     return null;
@@ -85,8 +85,10 @@ const ChainIndicators = () => {
     <Flex
       px={{ base: 3, lg: 4 }}
       py={ 3 }
-      borderRadius="base"
+      borderRadius={{ base: 'none', lg: 'lg' }}
+      boxShadow={{ base: 'none', lg: 'xl' }}
       bgColor={ bgColor }
+      border="1px solid #8c8d8f"
       columnGap={{ base: 3, lg: 4 }}
       rowGap={ 0 }
       flexBasis="50%"

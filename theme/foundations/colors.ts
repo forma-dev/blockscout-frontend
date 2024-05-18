@@ -18,7 +18,9 @@ const colors = {
     '900': '#1A365D',
   },
   red: {
-    '500': '#E53E3E',
+    '600': 'E53E3E',
+    '500': '#FF6B6B', // FF6B6B   E53E3E
+    '400': '#FF6B6B',
     '100': '#FED7D7',
   },
   orange: {
@@ -36,7 +38,7 @@ const colors = {
     '800': '#1A202C',
     '900': '#171923',
   },
-  black: '#101112',
+  black: '#000000',
   white: '#ffffff',
   blackAlpha: {
     '50': 'RGBA(16, 17, 18, 0.04)',

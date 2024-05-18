@@ -1,12 +1,12 @@
 const borders = {
   radii: {
     none: '0',
-    sm: '4px',
-    base: '8px',
-    md: '12px',
-    lg: '16px',
-    xl: '24px',
-    full: '9999px',
+    sm: '0',
+    base: '0',
+    md: '0',
+    lg: '0',
+    xl: '0',
+    full: '0',
   },
 };
 

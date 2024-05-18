@@ -14,6 +14,7 @@ import getValueWithUnit from 'lib/getValueWithUnit';
 import { currencyUnits } from 'lib/units';
 import AddressFromTo from 'ui/shared/address/AddressFromTo';
 import Skeleton from 'ui/shared/chakra/Skeleton';
+import Tag from 'ui/shared/chakra/Tag';
 import TxEntity from 'ui/shared/entities/tx/TxEntity';
 import TxStatus from 'ui/shared/statusTag/TxStatus';
 import TimeAgoWithTooltip from 'ui/shared/TimeAgoWithTooltip';
@@ -51,6 +52,11 @@ const LatestTxsItem = ({ tx, isLoading }: Props) => {
         <Box ml={ 3 } w="calc(100% - 40px)">
           <HStack flexWrap="wrap" my="3px">
             <TxType types={ tx.transaction_types } isLoading={ isLoading }/>
+            { tx.method && (
+              <Tag colorScheme={ tx.method === 'Multicall' ? 'teal' : 'gray' } isLoading={ isLoading } isTruncated>
+                { tx.method }
+              </Tag>
+            ) }
             <TxStatus status={ tx.status } errorText={ tx.status === 'error' ? tx.result : undefined } isLoading={ isLoading }/>
             <TxWatchListTags tx={ tx } isLoading={ isLoading }/>
           </HStack>
