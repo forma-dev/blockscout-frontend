@@ -18,7 +18,7 @@ const baseStylePopper = defineStyle({
 });
 
 const baseStyleContent = defineStyle((props) => {
-  const bg = mode('white', 'gray.900')(props);
+  const bg = mode('white', 'black')(props);
   const shadowColor = mode('blackAlpha.200', 'whiteAlpha.300')(props);
 
   return {
@@ -27,13 +27,13 @@ const baseStyleContent = defineStyle((props) => {
     [$arrowBg.variable]: $popperBg.reference,
     [$arrowShadowColor.variable]: `colors.${ shadowColor }`,
     _dark: {
-      [$popperBg.variable]: `colors.gray.900`,
+      [$popperBg.variable]: `colors.black`,
       [$arrowShadowColor.variable]: `colors.whiteAlpha.300`,
       boxShadow: 'dark-lg',
     },
     width: 'xs',
-    border: 'none',
-    borderColor: 'inherit',
+    border: '1px solid',
+    borderColor: 'gray.600',
     borderRadius: 'md',
     boxShadow: '2xl',
     zIndex: 'inherit',

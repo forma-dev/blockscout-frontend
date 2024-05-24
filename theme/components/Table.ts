@@ -71,10 +71,10 @@ const baseStyle = definePartsStyle({
     color: 'gray.500',
     letterSpacing: 'none',
     _first: {
-      borderTopLeftRadius: '8px',
+      borderTopLeftRadius: '0px',
     },
     _last: {
-      borderTopRightRadius: '8px',
+      borderTopRightRadius: '0px',
     },
   },
   td: {
