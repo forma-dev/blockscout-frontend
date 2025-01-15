@@ -90,7 +90,7 @@ export type ContentProps = Omit<EntityBase.ContentBaseProps, 'text'> & Pick<Enti
 
 const Content = chakra((props: ContentProps) => {
   const nameTag = props.address.metadata?.tags.find(tag => tag.tagType === 'name')?.name;
-  const nameText = nameTag || props.address.ens_domain_name || props.address.implementation_name || props.address.name;
+  const nameText = nameTag || props.address.ens_domain_name || props.address.name;
 
   const isProxy = props.address.implementations && props.address.implementations.length > 0;
 
