@@ -12,6 +12,7 @@ import type { Transaction } from 'types/api/transaction';
 import config from 'configs/app';
 import getValueWithUnit from 'lib/getValueWithUnit';
 import { currencyUnits } from 'lib/units';
+import { Badge } from 'toolkit/chakra/badge';
 import { Skeleton } from 'toolkit/chakra/skeleton';
 import AddressFromTo from 'ui/shared/address/AddressFromTo';
 import TxEntity from 'ui/shared/entities/tx/TxEntity';
@@ -50,6 +51,11 @@ const LatestTxsItem = ({ tx, isLoading }: Props) => {
         <Box ml={ 3 } w="calc(100% - 40px)">
           <HStack flexWrap="wrap" my="3px">
             <TxType types={ tx.transaction_types } isLoading={ isLoading }/>
+            { tx.method && (
+              <Badge colorPalette={ tx.method === 'Multicall' ? 'teal' : 'gray' } loading={ isLoading } truncated>
+                <span>{ tx.method }</span>
+              </Badge>
+            ) }
             <TxStatus status={ tx.status } errorText={ tx.status === 'error' ? tx.result : undefined } isLoading={ isLoading }/>
             <TxWatchListTags tx={ tx } isLoading={ isLoading }/>
           </HStack>
